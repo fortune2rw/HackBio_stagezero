@@ -1,1 +1,2 @@
-print ("My name is Fortunate, a student from Ulster University. My favourite gene is KRAS gene found in Homo Sapiens")
+about_me <- "Hi, my name is Fortunate, a student of Ulster University. My favourite gene is KRAS in Homo sapiens."
+print(about_me)
