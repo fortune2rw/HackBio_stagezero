@@ -1,0 +1,1 @@
+print ("My name is Fortunate, a student from Ulster University. My favourite gene is KRAS gene found in Homo Sapiens")
