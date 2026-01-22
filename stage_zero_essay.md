@@ -1,4 +1,4 @@
-***From FASTQ to Figure: Why Most Bioinformatics Pipelines Fail at the Last Mile***
+**From FASTQ to Figure: Why Most Bioinformatics Pipelines Fail at the Last Mile**
 
 *Introduction*
 
