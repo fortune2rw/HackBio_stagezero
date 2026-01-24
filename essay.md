@@ -1,13 +1,33 @@
 **From FASTQ to Figure: Why Most Bioinformatics Pipelines Fail at the Last Mile**
 
-*Introduction*
+**Introduction**
 
-Modern Bioinformatics pipelines such as nextflow, snakemake are powerful and provide a streamlined workflow for bioinformatics. From FASTQ file through quality check, trimming, sequence alignment and quantification. Although in most cases these pipelines overlook the most crucial part of data analysis which is visualization. For instance, in molecular biology, a large proportion of genomics data interpretation relies on visualization such as the creation of phylogenetic trees. However, research shows a current process for constructing and refining these data are inefficient (Black et al, 2020). In practice, pipelines often end with plots that are difficult to read and not very informative. Data visualization makes a crucial component in analysis, because when figures are less intuitive, it makes scientific decision a nightmare. For example, communicating findings to multi-disciplinary team can be challenging.
+Modern bioinformatics pipelines have transformed how genomic data are processed. Tools such as **Nextflow** and **Snakemake** enable automated workflows that take data from raw FASTQ files through quality control, trimming, sequence alignment, and quantification. While these pipelines are technically powerful, they often fail at a critical stage: **data visualization**.
 
-In most workflows, visualization is often treated as an add on instead of an integral part of the analysis/research question. Black et al, 2020 mentioned that visualization is often generated in a monolithic series of computations from raw sequencing reads and ends in single image. In most instances, genome data cannot be visualized and explored in many ways. After obtaining the result, default plot functions are executed to generate figures matches the data but lack inconsistency. For instance, color is arbitrary, legend contains missing information, axis might be lacking context. The figure of the plot lists the data but doesn’t interpret a meaning. In addition to lack of context, reproducibility is also affected. According to (Black et al, 2020), reproducible research requires figures to be generated from code with all parameters explicitly defined. Most pipelines use a narrow open-source software programs which could affect comparability of data and processes across agencies.
+Visualization is the point at which results become insight. When this step is poorly handled, even the most sophisticated analysis can lose its value. This article discusses how visualization is frequently overlooked in bioinformatics pipelines, why this undermines reproducibility and interpretation, and why visualization should be intentionally designed rather than improvised.
 
-Tools such as ggplot2, complexheatmap are powerful in R programming language and encourage critical thinking in how data should be designed. Bioinformaticians should choose plots based on biological questions and annotating figures to guide interpretation. Previous studies recommend taking a more functional and modular approach. Analytic and visualization workflow should be separated from pipelines assembly (Black et al, 2020).In the healthcare industry, most clinicians/health practitioners are not formally trained in genomics background hence lack skills when handling genomics data. Researchers must ensure that data visualizations effectively capture and convey uncertainties to experts and non experts.
+**Visualization as an Overlooked Component of Bioinformatics Pipelines**
 
-*Biblography:*
+In molecular biology, much of genomic data interpretation depends on visualization. Examples include phylogenetic trees, expression heatmaps, and coverage plots. Despite this reliance, research shows that current methods for constructing and refining these visual outputs are often inefficient (Black *et al.*, 2020).
 
-Black, A., MacCannell, D.R., Sibley, T.R. and Bedford, T. (2020). Ten recommendations for supporting open pathogen genomic analysis in public health. Nature Medicine, 26(6), 832–841. 
+In practice, many pipelines end with plots that are difficult to read and provide limited biological insight. When figures lack clarity, scientific decision-making becomes challenging. This problem is amplified when results need to be communicated to multidisciplinary teams, where not all members have the same technical background.
+
+Visualization is commonly treated as an add-on rather than an integral part of the research question. Black *et al.* (2020) describe how visualization is often produced through a monolithic sequence of computations that begins with raw sequencing reads and ends in a single static image. This approach restricts exploration, even though genomic data can be visualized and interpreted in multiple meaningful ways.
+
+**Reproducibility and the Need for Designed, Code-Driven Visualization**
+
+After results are generated, default plotting functions are frequently used to produce figures that technically reflect the data but lack context and consistency. Color choices may be arbitrary, legends incomplete, and axes poorly labeled. Such figures display data but fail to guide interpretation.
+
+This approach also affects **reproducibility**. Reproducible research requires that figures be generated entirely from code, with all parameters explicitly defined (Black *et al.*, 2020). When visualization depends on hidden defaults or manual adjustments, reproducing the same figure becomes difficult. Additionally, reliance on a narrow set of open-source tools can limit comparability of analyses across institutions and agencies.
+
+R-based visualization tools such as **ggplot2** and **ComplexHeatmap** encourage deliberate thinking about how data should be presented. Bioinformaticians should design plots based on biological questions and annotate figures to guide interpretation. A modular approach, in which analytical workflows are separated from visualization workflows, has been recommended to improve clarity and reproducibility (Black *et al.*, 2020).
+
+This consideration is especially important in healthcare settings. Many clinicians are not formally trained in genomics, which makes poorly designed visualizations a barrier to effective translation. Researchers must ensure that visualizations communicate uncertainty and meaning clearly to both expert and non-expert audiences.
+
+**Conclusion**
+
+Bioinformatics pipelines should not end at data processing but at meaningful interpretation. Visualization is not merely a presentation step; it is a core component of scientific reasoning and decision-making. Designing reproducible, code-driven figures ensures clarity, transparency, and effective communication across disciplines. By treating visualization as an integral part of analysis, bioinformatics workflows can move from producing results to delivering true biological understanding.
+
+**Bibliography**
+
+Black, A., MacCannell, D. R., Sibley, T. R., & Bedford, T. (2020). Ten recommendations for supporting open pathogen genomic analysis in public health. *Nature Medicine*, 26(6), 832-841.
