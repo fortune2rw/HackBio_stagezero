@@ -1,2 +1,11 @@
-about_me <- "Hi, my name is Fortunate, a student of Ulster University. My favourite gene is KRAS in Homo sapiens."
-print(about_me)
+#LITTLE INFORMATION ABOUT ME#
+name <- "Fortunate Omorotionmwan"
+school <- "Ulster University"
+gene <- "KRAS"
+location <- "Homo Sapien"
+
+paste0("Hi, my name is ", name,  
+             ", a student of ", school, 
+             ". My favourite gene is ", gene,  
+             " found in ",  location,"."
+)
